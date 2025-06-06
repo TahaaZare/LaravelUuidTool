@@ -1,0 +1,28 @@
+{
+  "name": "tahaazare/laravel-uuid-tool",
+  "description": "UUID generation tool for Laravel",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Tahaazare\\LaravelUuidTool\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "TahaaZare",
+      "email": "tahaazre.dev@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Tahazare\\LaravelUuidTool\\LaravelUuidToolServiceProvider"
+      ]
+    }
+  },
+  "require": {
+    "php": "^8.1",
+    "illuminate/support": "^10.0|^11.0|12.0"
+  }
+}
