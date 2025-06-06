@@ -5,21 +5,34 @@
 
 ---
 
-## 📦 Install | نصب
+## 📦 نصب (Installation)
+
+### 🔹 روش ۱: نصب از Packagist
 
 ```bash
 composer require tahazare/laravel-uuidtool
 ```
 
-> اگر پکیج به صورت local هست:
-> ```json
-> "repositories": [
->   {
->     "type": "path",
->     "url": "../laravel-uuidtool"
->   }
-> ]
-> ```
+### 🔹 روش ۲: استفاده از نسخه لوکال (برای توسعه)
+
+اگر می‌خواهید پکیج را از طریق مسیر محلی نصب کنید:
+
+1. مسیر پکیج را در فایل `composer.json` پروژه لاراولی خود اضافه کنید:
+
+```json
+"repositories": [
+  {
+    "type": "path",
+    "url": "../laravel-uuidtool"
+  }
+]
+```
+
+2. سپس دستور زیر را اجرا کنید:
+
+```bash
+composer require tahazare/laravel-uuidtool
+```
 
 ---
 
@@ -92,4 +105,4 @@ UuidTool::generate('string');
 
 ## 🔒 License | لایسنس
 
-MIT © TahaaZare
+[MIT license](https://opensource.org/licenses/MIT) © TahaaZare
