@@ -8,7 +8,7 @@
 ## 📦 Install | نصب
 
 ```bash
-composer require tahazare/laravel-uuidtool
+composer require tahaazare/laravel-uuid-tool
 ```
 
 > اگر پکیج به صورت local هست:
