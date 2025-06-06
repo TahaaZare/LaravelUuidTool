@@ -11,17 +11,6 @@
 composer require tahaazare/laravel-uuid-tool
 ```
 
-> اگر پکیج به صورت local هست:
-> ```json
-> "repositories": [
->   {
->     "type": "path",
->     "url": "../laravel-uuidtool"
->   }
-> ]
-> ```
-
----
 
 ## ⚙️ Usage | نحوه استفاده
 
@@ -42,53 +31,17 @@ echo $uuidInt;
 
 ---
 
-### ✅ Route Example | مثال در روت
-
-```php
-Route::get('/uuid', function () {
-    $uuidTool = app('uuidtool');
-
-    return [
-        'uuid_string' => $uuidTool->generate('string'),
-        'uuid_int' => $uuidTool->generate('int'),
-    ];
-});
-```
-
----
-
 ## 🧩 Laravel Auto Discovery
 
 این پکیج از Auto-Discovery لاراول پشتیبانی می‌کند و نیازی به افزودن دستی provider نیست.
 
----
-
-## 🔧 Optional: Add Facade | افزودن facade (اختیاری)
-
-اگر دوست دارید راحت‌تر استفاده کنید:
 
 ```php
-'aliases' => [
-    'UuidTool' => Tahazare\LaravelUuidTool\Facades\UuidTool::class,
-],
+UuidGenerator::generate('string');
+UuidGenerator::generate('string',12);
+UuidGenerator::generate('int',12);
+UuidGenerator::generate('int',12);
 ```
-
-و سپس:
-
-```php
-UuidTool::generate('string');
-```
-
----
-
-## ✅ Types | انواع خروجی‌ها
-
-| نوع | مقدار | توضیح |
-|-----|--------|-------|
-| string | `'string'` | UUID نسخه ۴ استاندارد (مثال: `3c9c-...`) |
-| int | `'int'` | UUID به عدد ۳۶ رقمی تبدیل می‌شود |
-
----
 
 ## 🔒 License | لایسنس
 
