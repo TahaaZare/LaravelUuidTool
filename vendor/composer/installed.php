@@ -3,7 +3,7 @@
         'name' => 'tahaazare/laravel-uuid-tool',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '5e2279b44d9429f582f80bb8ade3e8047eb4bd32',
+        'reference' => 'c837691166372c5d6b594326ce08e48adaae3252',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -184,7 +184,7 @@
         'tahaazare/laravel-uuid-tool' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '5e2279b44d9429f582f80bb8ade3e8047eb4bd32',
+            'reference' => 'c837691166372c5d6b594326ce08e48adaae3252',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
