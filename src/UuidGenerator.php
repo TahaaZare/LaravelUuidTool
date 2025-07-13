@@ -3,6 +3,7 @@
 namespace Tahaazare\LaravelUuidTool;
 
 use Illuminate\Support\Str;
+use Illuminate\Database\Eloquent\Model;
 
 class UuidGenerator
 {
@@ -42,5 +43,23 @@ class UuidGenerator
         }
 
         return str_pad($decimalStr, $length, '0', STR_PAD_RIGHT);
+    }
+
+
+    public function generateFor(Model|string $model, string $column = 'uuid', int $minLength = 3): string
+    {
+        $length = $minLength;
+
+        do {
+            $uuid = str_pad(mt_rand(0, pow(10, $length) - 1), $length, '0', STR_PAD_LEFT);
+            $exists = $model::where($column, $uuid)->exists();
+            $length++;
+        } while ($exists && $length <= 20);
+
+        if ($exists) {
+            throw new \RuntimeException("Failed to generate unique UUID after maximum attempts.");
+        }
+
+        return $uuid;
     }
 }
