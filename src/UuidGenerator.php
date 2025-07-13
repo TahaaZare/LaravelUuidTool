@@ -46,7 +46,7 @@ class UuidGenerator
     }
 
 
-    public function generateFor(Model|string $model, string $column = 'uuid', string $type = 'string', int $minLength = 3): string
+    public static function generateFor(Model|string $model, string $column = 'uuid', string $type = 'string', int $minLength = 3): string
     {
         $length = $minLength;
 
