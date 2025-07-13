@@ -45,7 +45,3 @@ UuidGenerator::generate('int',12);
 UuidGenerator::generateFor(Model::class,'uuid','int',4);
 UuidGenerator::generateFor(Model::class,'uuid','string',4);
 ```
-
-## 🔒 License | لایسنس
-
-MIT © TahaaZare
